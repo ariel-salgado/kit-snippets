@@ -1,4 +1,13 @@
-![kit-snippets icon](https://github.com/ArielSalgado/kit-snippets/blob/main/images/icon.png)
+<figure style="display: flex; place-items: center; place-content: center">
+  <img
+  src="https://github.com/ArielSalgado/kit-snippets/blob/main/images/icon.png"
+  alt="Svelte Logo"
+  width="80"
+  >
+  <figcaption>
+    <h1>Kit Snippets</h1>
+  </figcaption>
+</figure>
 
 # kit-snippets
 
