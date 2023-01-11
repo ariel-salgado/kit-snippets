@@ -15,3 +15,10 @@
 ### Added
 
 - Added final cursor stop location
+
+## [1.0.3] - 2023-01-11
+
+### Added
+
+- MIT License
+- Changed description for better marketplace searching
