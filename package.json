@@ -1,8 +1,14 @@
 {
   "name": "kit-snippets",
   "displayName": "kit-snippets",
-  "description": "SvelteKit Snippets",
+  "description": "Snippets for SvelteKit",
   "version": "1.0.0",
+  "icon": "images/icon.png",
+  "publisher": "ArielSalgado",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArielSalgado/kit-snippets.git"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
