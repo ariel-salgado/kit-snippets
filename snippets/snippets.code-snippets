@@ -4,7 +4,7 @@
     "prefix": "kitComp",
     "body": [
       "<script>",
-      "\t $1",
+      "\t$0",
       "</script>",
       "",
       "<slot />",
@@ -20,7 +20,7 @@
     "prefix": "kitCompTS",
     "body": [
       "<script lang=\"ts\">",
-      "\t $1",
+      "\t$0",
       "</script>",
       "",
       "<slot />",
@@ -37,7 +37,7 @@
     "prefix": "kitCompPost",
     "body": [
       "<script>",
-      "\t $1",
+      "\t$0",
       "</script>",
       "",
       "<slot />",
@@ -54,7 +54,7 @@
     "prefix": "kitCompTSPost",
     "body": [
       "<script lang=\"ts\">",
-      "\t $1",
+      "\t$0",
       "</script>",
       "",
       "<slot />",
@@ -71,7 +71,7 @@
     "prefix": "kitScriptTS",
     "body": [
       "<script lang=\"ts\">",
-      "\t $1",
+      "\t$0",
       "</script>",
       ""
     ],
@@ -83,7 +83,7 @@
     "prefix": "kitModule",
     "body": [
       "<script context=\"module\">",
-      "\t $1",
+      "\t$0",
       "</script>",
       ""
     ],
@@ -95,7 +95,7 @@
     "prefix": "kitModuleTS",
     "body": [
       "<script context=\"module\" lang=\"ts\">",
-      "\t $1",
+      "\t$0",
       "</script>",
       ""
     ],
@@ -107,7 +107,7 @@
     "prefix": "KitSlotProp",
     "body": [
       "<slot ${1:prop}=\"${2:name}\">",
-      "\t ${3:expression}",
+      "\t$0",
       "</slot>",
       ""
     ],
@@ -119,7 +119,7 @@
     "prefix": "kitStylePost",
     "body": [
       "<style lang=\"postcss\">",
-      "\t $1",
+      "\t$0",
       "</style>",
       ""
     ],
@@ -129,12 +129,7 @@
   "Svelte If Statement": {
     "scope": "svelte",
     "prefix": "kitIf",
-    "body": [
-      "{#if ${1:expression}}",
-      "\t ${2:...}",
-      "{/if}",
-      ""
-    ],
+    "body": ["{#if ${1:expression}}", "\t$0", "{/if}", ""],
     "description": "Svelte if statement"
   },
 
@@ -143,11 +138,11 @@
     "prefix": "kitIfElse",
     "body": [
       "{#if ${1:expression}}",
-      "\t ${2:...}",
+      "\t$0",
       "{:else if ${3:expression}}",
-      "\t ${4:...}",
+      "\t",
       "{:else}",
-      "\t ${5:...}",
+      "\t",
       "{/if}",
       ""
     ],
@@ -159,7 +154,7 @@
     "prefix": "kitEach",
     "body": [
       "{#each ${1:expression} as ${2:name}}",
-      "\t ${3:...}",
+      "\t$0",
       "{/each}",
       ""
     ],
@@ -171,7 +166,7 @@
     "prefix": "kitEachIdx",
     "body": [
       "{#each ${1:expression} as ${2:name}, ${3:index}}",
-      "\t ${3:...]",
+      "\t$0",
       "{/each}",
       ""
     ],
@@ -183,9 +178,9 @@
     "prefix": "kitEachElse",
     "body": [
       "{#each ${1:expression} as ${2:name}}",
-      "\t ${3:...}",
+      "\t$0",
       "{:else}",
-      "\t ${4:...}",
+      "\t",
       "{/each}",
       ""
     ],
@@ -197,11 +192,11 @@
     "prefix": "kitAwait",
     "body": [
       "{#await ${1:expression}}",
-      "\t ${2:...}",
+      "\t$0",
       "{:then ${3:name}}",
-      "\t ${4:...}",
+      "\t",
       "{:catch ${5:error}}",
-      "\t ${6:...}",
+      "\t",
       "{/await}",
       ""
     ],
@@ -213,7 +208,7 @@
     "prefix": "kitKey",
     "body": [
       "{:key ${1:expression}}",
-      "\t $2",
+      "\t$0",
       "{/key}",
       ""
     ],
@@ -259,8 +254,8 @@
     "prefix": "kit:head",
     "body": [
       "<svelte:head>",
-      "\t <title>${1:title}</title>",
-      "\t <meta name=\"description\" content=\"${2:content}\">",
+      "\t<title>${1:title}</title>",
+      "\t<meta name=\"description\" content=\"${2:content}\">",
       "</svelte:head>",
       ""
     ],
@@ -282,7 +277,7 @@
     "prefix": "kit:fragment",
     "body": [
       "<svelte:fragment slot=\"${1:name}\"/>",
-      "\t $2",
+      "\t$2",
       "</svelte:fragment>",
       ""
     ],
@@ -292,79 +287,79 @@
   "Svelte onMount": {
     "scope": "svelte",
     "prefix": "kitOnMount",
-    "body": ["onMount(() => {", "\t $1", "});"],
+    "body": ["onMount(() => {", "\t$0", "});"],
     "description": "Svelte onMount"
   },
 
   "Svelte beforeUpdate": {
     "scope": "svelte",
     "prefix": "kitBeforeUpdate",
-    "body": ["beforeUpdate(() => {", "\t $1", "});"],
+    "body": ["beforeUpdate(() => {", "\t$0", "});"],
     "description": "Svelte beforeUpdate"
   },
 
   "Svelte afterUpdate": {
     "scope": "svelte",
     "prefix": "kitAfterUpdate",
-    "body": ["afterUpdate(() => {", "\t $1", "});"],
+    "body": ["afterUpdate(() => {", "\t$0", "});"],
     "description": "Svelte afterUpdate"
   },
 
   "Svelte onDestroy": {
     "scope": "svelte",
     "prefix": "kitOnDestroy",
-    "body": ["onDestroy(() => {", "\t $1", "});"],
+    "body": ["onDestroy(() => {", "\t$0", "});"],
     "description": "Svelte onDestroy"
   },
 
   "SvelteKit Page Data": {
-    "scope": "svelte",
+    "scope": "svelte,javascript,typescript",
     "prefix": "kitPageData",
     "body": [
       "/** @type {import('./\\$types').${1|PageData,LayoutData|}} */",
-      "\t export let data;",
-      ""
+      "\texport let data;",
+      "$0"
     ],
     "description": "SvelteKit page and layout data"
   },
 
   "SvelteKit Page Data TS": {
-    "scope": "svelte",
+    "scope": "svelte,typescript",
     "prefix": "kitPageDataTS",
     "body": [
       "import type { ${1|PageData,LayoutData|} } from './\\$types';",
       "",
-      "\t export let data: $1;",
-      ""
+      "\texport let data: $1;",
+      "$0"
     ],
     "description": "SvelteKit page and layout data with TypeScript"
   },
 
   "SvelteKit Action Data": {
-    "scope": "svelte",
+    "scope": "svelte,javascript,typescript",
     "prefix": "kitActionData",
     "body": [
       "/** @type {import('./\\$types').ActionData} */",
       "export let form;",
-      ""
+      "$0"
     ],
     "description": "SvelteKit action data data"
   },
 
   "SvelteKit Action Data TS": {
-    "scope": "svelte",
+    "scope": "svelte,typescript",
     "prefix": "kitActionDataTS",
     "body": [
       "import type { ActionData } from './\\$types';",
       "",
       "export let form: ActionData;",
-      ""
+      "$0"
     ],
     "description": "SvelteKit action data data with TypeScript"
   },
 
   "SvelteKit Page Data and Action Data": {
-    "scope": "svelte",
+    "scope": "svelte,javascript,typescript",
     "prefix": "kitPageAction",
     "body": [
       "/** @type {import('./\\$types').PageData} */",
@@ -372,20 +367,20 @@
       "",
       "/** @type {import('./\\$types').ActionData} */",
       "export let form;",
-      ""
+      "$0"
     ],
     "description": "SvelteKit page data and action data "
   },
 
   "SvelteKit Page Data and Action Data TS": {
-    "scope": "svelte",
+    "scope": "svelte,typescript",
     "prefix": "kitPageActionTS",
     "body": [
       "import type { PageData, ActionData } from './\\$types';",
       "",
       "export let data: PageData;",
       "export let form: ActionData",
-      ""
+      "$0"
     ],
     "description": "SvelteKit page data and action data with TypeScript"
   },
@@ -395,10 +390,11 @@
     "prefix": "kitError",
     "body": [
       "<script>",
-      "\t import { page } from '$app/stores';",
+      "\timport { page } from '$app/stores';",
       "</script>",
       "",
-      "<h1>{$page.status}: {$page.error.message}</h1>"
+      "<h1>{$page.status}: {$page.error.message}</h1>",
+      "$0"
     ],
     "description": "SvelteKit +error.svelte template"
   },
@@ -410,7 +406,7 @@
       "import type { ${1|PageLoad,PageServerLoad,LayoutLoad,LayoutServerLoad|} } from './\\$types';",
       "",
       "export const load = (async ({ $2 }) => {",
-      "\t $3",
+      "\t$0",
       "}) satisfies $1;",
       ""
     ],
@@ -424,8 +420,8 @@
       "import type { RequestHandler } from './\\$types';",
       "",
       "export const ${1|GET,POST,PATCH,PUT,DELETE|} = (({ $2 }) => {",
-      "\t $3",
-      "\t return new Response()",
+      "\t$0",
+      "\treturn new Response()",
       "}) satisfies RequestHandler;",
       ""
     ],
@@ -439,9 +435,9 @@
       "import type { Actions } from './\\$types';",
       "",
       "export const actions = {",
-      "\t ${1:default}: async ({ $2 }) => {",
-      "\t\t return $3;",
-      "\t }",
+      "\t${1:default}: async ({ $2 }) => {",
+      "\t\treturn $0;",
+      "\t}",
       "} satisfies Actions;",
       ""
     ],
@@ -454,7 +450,7 @@
     "body": [
       "/** @type {import('@sveltejs/kit').Handle} */",
       "export async function handle({ $1 }) {",
-      "\t return $2;",
+      "\treturn $0;",
       "}",
       ""
     ],
@@ -468,7 +464,7 @@
       "import type { Handle } from '@sveltejs/kit';",
       "",
       "export const handle = (async ({ $1 }) => {",
-      "\t return $2;",
+      "\treturn $0;",
       "}) satisfies Handle;",
       ""
     ],
@@ -481,7 +477,7 @@
     "body": [
       "/** @type {import('@sveltejs/kit').HandleFetch} */",
       "export function handleFetch({ $1 }) {",
-      "\t return $2;",
+      "\treturn $0;",
       "}",
       ""
     ],
@@ -495,7 +491,7 @@
       "import type { HandleFetch } from '@sveltejs/kit';",
       "",
       "export const handleFetch = (({ $1 }) => {",
-      "\t return $2;",
+      "\treturn $0;",
       "}) satisfies HandleFetch;",
       ""
     ],
@@ -508,7 +504,7 @@
     "body": [
       "/** @type {import('@sveltejs/kit').HandleClientError} */",
       "export function handleError({ $1 }) {",
-      "\t return $2;",
+      "\treturn $0;",
       "}",
       ""
     ],
@@ -522,7 +518,7 @@
       "import type { HandleClientError } from '@sveltejs/kit';",
       "",
       "export const handleError = (({ $1 }) => {",
-      "\t return $2;",
+      "\treturn $0;",
       "}) satisfies HandleClientError;",
       ""
     ],
@@ -535,7 +531,7 @@
     "body": [
       "/** @type {import('@sveltejs/kit').HandleServerError} */",
       "export function handleError({ $1 }) {",
-      "\t return $2;",
+      "\treturn $0;",
       "}",
       ""
     ],
@@ -549,7 +545,7 @@
       "import type { HandleServerError } from '@sveltejs/kit';",
       "",
       "export const handleError = (({ $1 }) => {",
-      "\t return $2;",
+      "\treturn $0;",
       "}) satisfies HandleServerError;",
       ""
     ],
@@ -563,7 +559,7 @@
       "import type { ParamMatcher } from '@sveltejs/kit';",
       "",
       "export const match = ((param) => {",
-      "\t return $1;",
+      "\treturn $0;",
       "}) satisfies ParamMatcher;",
       ""
     ],
