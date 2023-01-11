@@ -321,7 +321,7 @@
     "scope": "svelte",
     "prefix": "kitPageData",
     "body": [
-      "/** @type {import('./$types').${1|PageData,LayoutData|}} */",
+      "/** @type {import('./\\$types').${1|PageData,LayoutData|}} */",
       "\t export let data;",
       ""
     ],
@@ -332,7 +332,7 @@
     "scope": "svelte",
     "prefix": "kitPageDataTS",
     "body": [
-      "import type { ${1|PageData,LayoutData|} } from './$types';",
+      "import type { ${1|PageData,LayoutData|} } from './\\$types';",
       "",
       "\t export let data: $1;",
       ""
@@ -344,7 +344,7 @@
     "scope": "svelte",
     "prefix": "kitActionData",
     "body": [
-      "/** @type {import('./$types').ActionData} */",
+      "/** @type {import('./\\$types').ActionData} */",
       "export let form;",
       ""
     ],
@@ -355,7 +355,7 @@
     "scope": "svelte",
     "prefix": "kitActionDataTS",
     "body": [
-      "import type { ActionData } from './$types';",
+      "import type { ActionData } from './\\$types';",
       "",
       "export let form: ActionData;",
       ""
@@ -367,10 +367,10 @@
     "scope": "svelte",
     "prefix": "kitPageAction",
     "body": [
-      "/** @type {import('./$types').PageData} */",
+      "/** @type {import('./\\$types').PageData} */",
       "export let data;",
       "",
-      "/** @type {import('./$types').ActionData} */",
+      "/** @type {import('./\\$types').ActionData} */",
       "export let form;",
       ""
     ],
@@ -381,7 +381,7 @@
     "scope": "svelte",
     "prefix": "kitPageActionTS",
     "body": [
-      "import type { PageData, ActionData } from './$types';",
+      "import type { PageData, ActionData } from './\\$types';",
       "",
       "export let data: PageData;",
       "export let form: ActionData",
@@ -407,7 +407,7 @@
     "scope": "typescript",
     "prefix": "kitLoadTS",
     "body": [
-      "import type { ${1|PageLoad,PageServerLoad,LayoutLoad,LayoutServerLoad|} } from './$types';",
+      "import type { ${1|PageLoad,PageServerLoad,LayoutLoad,LayoutServerLoad|} } from './\\$types';",
       "",
       "export const load = (async ({ $2 }) => {",
       "\t $3",
@@ -421,7 +421,7 @@
     "scope": "typescript",
     "prefix": "kitEndpointTS",
     "body": [
-      "import type { RequestHandler } from './$types';",
+      "import type { RequestHandler } from './\\$types';",
       "",
       "export const ${1|GET,POST,PATCH,PUT,DELETE|} = (({ $2 }) => {",
       "\t $3",
@@ -436,7 +436,7 @@
     "scope": "typescript",
     "prefix": "kitActionsTS",
     "body": [
-      "import type { Actions } from './$types';",
+      "import type { Actions } from './\\$types';",
       "",
       "export const actions = {",
       "\t ${1:default}: async ({ $2 }) => {",
