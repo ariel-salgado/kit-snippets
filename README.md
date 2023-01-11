@@ -1,13 +1,4 @@
-<figure style="display: flex; place-items: center; place-content: center">
-  <img
-  src="https://styles.redditmedia.com/t5_4ab8qx/styles/communityIcon_c76oa7hrwdu61.png?width=256&v=enabled&s=ef4bf94efd8700768fc487e229541ad3302aa588"
-  alt="Svelte Logo"
-  width="80"
-  >
-  <figcaption>
-    <h1>Kit Snippets</h1>
-  </figcaption>
-</figure>
+![kit-snippets icon](https://github.com/ArielSalgado/kit-snippets/blob/main/images/icon.png)
 
 # kit-snippets
 
