@@ -2,7 +2,7 @@
   "name": "kit-snippets",
   "displayName": "kit-snippets",
   "description": "Snippets for Svelte and SvelteKit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "icon": "images/icon.png",
   "publisher": "ArielSalgado",
   "repository": {

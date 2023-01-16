@@ -22,3 +22,13 @@
 
 - MIT License
 - Changed description for better marketplace searching
+
+## [1.0.4] - 2023-01-15
+
+### Fixed
+
+- kitKey syntax error, `{:key` => `{#key`
+
+### Added
+
+- kitDispatcher: Scaffolds a `createEventDispatcher` object

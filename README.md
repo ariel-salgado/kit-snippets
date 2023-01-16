@@ -43,6 +43,7 @@ Kit-snippets provides snippets for both Svelte and Sveltekit!
 | kitBeforeUpdate | Scaffolds a `beforeUpdate` method                   |
 | kitAfterUpdate  | Scaffolds a `afterUpdate` method                    |
 | kitOnDestroy    | Scaffolds a `onDestroy` method                      |
+| kitDispatcher   | Scaffolds a `createEventDispacther` object          |
 
 #### SvelteKit Snippets
 
@@ -68,7 +69,7 @@ Kit-snippets provides snippets for both Svelte and Sveltekit!
 | kitServerErrorTS  | Scaffolds a TypeScript SvelteKit HandleServerError function         |
 | kitParamMatcherTS | Scaffolds a TypeScript SvelteKit ParamMatcher function              |
 
-## Why some snippets don't have a JS version?
+## Why some snippets doesn't have a JS version?
 
 Some snippets like `kitLoadTS` and `kitActionsTS` doesn't have a JS version because they are supported by [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) and if you don't have that extension installed, you should.
 
