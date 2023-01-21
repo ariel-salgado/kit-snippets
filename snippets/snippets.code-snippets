@@ -576,5 +576,36 @@
       ""
     ],
     "description": "SvelteKit params matcher with TypeScript"
+  },
+
+  "SvelteKit Enhanced Form": {
+    "scope": "svelte",
+    "prefix": "kitEnhancedForm",
+    "body": [
+      "<script lang='ts'>",
+      "\timport { enhance } from '\\$app/forms';",
+      "\timport type { SubmitFunction } from '\\$app/forms';",
+      "\timport type { ActionData, PageData } from './\\$types';",
+      "",
+      "\texport let data: PageData;",
+      "\texport let form: ActionData;",
+      "\t",
+      "\tconst submit: SubmitFunction = async () => {",
+      "\t\t// do something before the form is submitted",
+      "",
+      "\t\treturn async ({ update }) => {",
+      "\t\t\t// do something after the form is submitted",
+      "\t\t\t",
+      "\t\t\tawait update();",
+      "\t\t};",
+      "\t};",
+      "</script>",
+      "",
+      "<form action='?/' use:enhance={submit}>",
+      "\t<button type='submit'>Submit</button>",
+      "</form>",
+      ""
+    ],
+    "description": "SvelteKit enhanced form"
   }
 }
