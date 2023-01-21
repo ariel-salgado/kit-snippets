@@ -32,3 +32,9 @@
 ### Added
 
 - kitDispatcher: Scaffolds a `createEventDispatcher` object
+
+## [1.0.5] - 2023-01-21
+
+### Added
+
+- kitEnhancedForm: Scaffolds a enhanced form with PageData and ActionData variables

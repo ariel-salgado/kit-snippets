@@ -68,6 +68,7 @@ Kit-snippets provides snippets for both Svelte and Sveltekit!
 | kitServerError    | Scaffolds a SvelteKit HandleServerError function                    |
 | kitServerErrorTS  | Scaffolds a TypeScript SvelteKit HandleServerError function         |
 | kitParamMatcherTS | Scaffolds a TypeScript SvelteKit ParamMatcher function              |
+| kitEnhancedForm   | Scaffolds a Sveltekit Enhanced form                                 |
 
 ## Why some snippets doesn't have a JS version?
 
