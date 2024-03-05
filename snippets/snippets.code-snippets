@@ -276,7 +276,7 @@
     "scope": "svelte",
     "prefix": "kit:fragment",
     "body": [
-      "<svelte:fragment slot=\"${1:name}\"/>",
+      "<svelte:fragment slot=\"${1:name}\">",
       "\t$2",
       "</svelte:fragment>",
       ""
